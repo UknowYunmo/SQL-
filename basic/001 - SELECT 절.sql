@@ -1,11 +1,11 @@
-µ¥ÀÌÅÍ¸¦ Á¤·ÄÇØ¼­ Ãâ·ÂÇÏ±â (ORDER  BY)
+ë°ì´í„°ë¥¼ ì •ë ¬í•´ì„œ ì¶œë ¥í•˜ê¸° (ORDER  BY)
 
-* order by ÀýÀº µ¥ÀÌÅÍ¸¦ Á¤·ÄÇÏ´Â ÀýÀÌ°í select ¹®Àå¿¡ ¸Ç ¸¶Áö¸·¿¡ ±â¼úÇÑ´Ù.
-* Á¤·ÄÇÒ ÄÃ·³¸í Á¤·Ä¹æ¹ý :
-asc : ³·Àº°ªºÎÅÍ ³ôÀº°ª ¼øÀ¸·Î
-desc : ³ôÀº°ªºÎÅÍ ³·Àº°ª ¼øÀ¸·Î
+* order by ì ˆì€ ë°ì´í„°ë¥¼ ì •ë ¬í•˜ëŠ” ì ˆì´ê³  select ë¬¸ìž¥ì— ë§¨ ë§ˆì§€ë§‰ì— ê¸°ìˆ í•œë‹¤.
+* ì •ë ¬í•  ì»¬ëŸ¼ëª… ì •ë ¬ë°©ë²• :
+asc : ë‚®ì€ê°’ë¶€í„° ë†’ì€ê°’ ìˆœìœ¼ë¡œ
+desc : ë†’ì€ê°’ë¶€í„° ë‚®ì€ê°’ ìˆœìœ¼ë¡œ
 
-¿¹Á¦ : ¿ù±ÞÀÌ ³ôÀº ¼øÀ¸·Î ÀÌ¸§°ú ¿ù±ÞÀ» Ãâ·ÂÇÏ±â
+ì˜ˆì œ : ì›”ê¸‰ì´ ë†’ì€ ìˆœìœ¼ë¡œ ì´ë¦„ê³¼ ì›”ê¸‰ì„ ì¶œë ¥í•˜ê¸°
 select ename, sal
   from  emp
   order by sal desc;
@@ -18,34 +18,34 @@ select ename, sal
   from  emp
   order by sal;
 
-º¸ÀÌ´Â °ÍÃ³·³ ¿À¸§Â÷¼ø(asc) ¶Ç´Â ³»¸²Â÷¼ø(desc)À» ¸í½ÃÇÏÁö ¾ÊÀ¸¸é µðÆúÆ® °ªÀº asc´Ù.
+ë³´ì´ëŠ” ê²ƒì²˜ëŸ¼ ì˜¤ë¦„ì°¨ìˆœ(asc) ë˜ëŠ” ë‚´ë¦¼ì°¨ìˆœ(desc)ì„ ëª…ì‹œí•˜ì§€ ì•Šìœ¼ë©´ ë””í´íŠ¸ ê°’ì€ ascë‹¤.
 
 
-¶ÇÇÑ
+ë˜í•œ
  select ename, job, hiredate
   from  emp
   order  by 2 asc, 3 asc; 
 
-À§¿Í °°ÀÌ order by¸¦ 2°³ ÀÌ»ó ÇØÁÖ´Â °Íµµ °¡´ÉÇÏ¸ç, select ÀýÀÇ ÄÃ·³¸íÀ» °£´ÜÇÏ°Ô ¼ø¼­´ë·Î 1,2,3À¸·Î ´ëÃ¼ÇØ¼­ ÀÛ¼ºÇÒ ¼ö ÀÖ´Ù.
+ìœ„ì™€ ê°™ì´ order byë¥¼ 2ê°œ ì´ìƒ í•´ì£¼ëŠ” ê²ƒë„ ê°€ëŠ¥í•˜ë©°, select ì ˆì˜ ì»¬ëŸ¼ëª…ì„ ê°„ë‹¨í•˜ê²Œ ìˆœì„œëŒ€ë¡œ 1,2,3ìœ¼ë¡œ ëŒ€ì²´í•´ì„œ ìž‘ì„±í•  ìˆ˜ ìžˆë‹¤.
 
 
-where Àý (¼ýÀÚ µ¥ÀÌÅÍ °Ë»ö)
+where ì ˆ (ìˆ«ìž ë°ì´í„° ê²€ìƒ‰)
 
-* where ÀýÀ» »ç¿ëÇÏ¸é Æ¯Á¤ Á¶°Ç¿¡ ´ëÇÑ µ¥ÀÌÅÍ¸¸ ¼±º°ÇØ¼­ Ãâ·ÂÇÒ ¼ö ÀÖ´Ù
+* where ì ˆì„ ì‚¬ìš©í•˜ë©´ íŠ¹ì • ì¡°ê±´ì— ëŒ€í•œ ë°ì´í„°ë§Œ ì„ ë³„í•´ì„œ ì¶œë ¥í•  ìˆ˜ ìžˆë‹¤.
 
-* ±âº» ºñ±³ ¿¬»êÀÚ
+* ê¸°ë³¸ ë¹„êµ ì—°ì‚°ìž
 
  >, <, >=, <=, =,  !=, <>, ^=
-ÀÌ Áß¿¡ [!=,<>,^=]-->ÀÌ°Íµé ÀüºÎ ´Ù °°Áö ¾Ê´Ù´Â ¶æ.
+ì´ ì¤‘ì— [!=,<>,^=]-->ì´ê²ƒë“¤ ì „ë¶€ ë‹¤ ê°™ì§€ ì•Šë‹¤ëŠ” ëœ».
 
 
-¿¹Á¦ : ¿ù±ÞÀÌ 3000 ÀÌ»óÀÎ »ç¿øµéÀÇ ÀÌ¸§°ú ¿ù±ÞÀ» Ãâ·ÂÇÏ±â
+ì˜ˆì œ : ì›”ê¸‰ì´ 3000 ì´ìƒì¸ ì‚¬ì›ë“¤ì˜ ì´ë¦„ê³¼ ì›”ê¸‰ì„ ì¶œë ¥í•˜ê¸°
 
 select ename, sal
    from emp
    where sal>=3000;
 
-¿¹Á¦ : Á÷¾÷ÀÌ SALESMANÀÌ ¾Æ´Ñ »ç¿øµéÀÇ ÀÌ¸§°ú Á÷¾÷À» Ãâ·ÂÇÏ±â
+ì˜ˆì œ : ì§ì—…ì´ SALESMANì´ ì•„ë‹Œ ì‚¬ì›ë“¤ì˜ ì´ë¦„ê³¼ ì§ì—…ì„ ì¶œë ¥í•˜ê¸°
 
 select ename, job
    from emp
@@ -56,15 +56,15 @@ select  ename, hiredate, deptno
    where deptno = 20
    order by 2 desc;
 
-ºÎ¼­ ¹øÈ£°¡ 20ÀÎ »ç¿øµéÀÇ ÀÌ¸§, °í¿ëÀÏ, ºÎ¼­ ¹øÈ£¸¦ Ãâ·ÂÇÏ°í ÃÖ±Ù¿¡ °í¿ëµÈ ¼ø¼­ºÎÅÍ Á¤·Ä
+ë¶€ì„œ ë²ˆí˜¸ê°€ 20ì¸ ì‚¬ì›ë“¤ì˜ ì´ë¦„, ê³ ìš©ì¼, ë¶€ì„œ ë²ˆí˜¸ë¥¼ ì¶œë ¥í•˜ê³  ìµœê·¼ì— ê³ ìš©ëœ ìˆœì„œë¶€í„° ì •ë ¬
 
 
-8. where Àý - 2 (¹®ÀÚ¿Í ³¯Â¥ °Ë»ö)
+8. where ì ˆ - 2 (ë¬¸ìžì™€ ë‚ ì§œ ê²€ìƒ‰)
 
-* ¼ýÀÚ°¡ ¾Æ´Ñ ¹®ÀÚ¸¦ °Ë»öÇÒ ¶§´Â ¹®ÀÚ ¾çÂÊ¿¡ ½Ì±Û ÄõÅ×ÀÌ¼Ç ¸¶Å©('')¸¦ µÑ·¯Áà¾ß ÇÑ´Ù.
+* ìˆ«ìžê°€ ì•„ë‹Œ ë¬¸ìžë¥¼ ê²€ìƒ‰í•  ë•ŒëŠ” ë¬¸ìž ì–‘ìª½ì— ì‹±ê¸€ ì¿¼í…Œì´ì…˜ ë§ˆí¬('')ë¥¼ ë‘˜ëŸ¬ì¤˜ì•¼ í•œë‹¤.
 
 select  ename, sal
  from emp
  where ename='SCOTT'; 
 
-¶ÇÇÑ ¹®ÀÚ¿­Àº ´ë¹®ÀÚ¸¦ ±¸ºÐÇÏ±â ¶§¹®¿¡ ¼Ò¹®ÀÚÀÎ scottÀ¸·Î °Ë»öÇÏ¸é ´Ù¸¥ °ÍÀ¸·Î ÀÎ½ÄµÇ¾î °Ë»ö °á°ú°¡ Ãâ·ÂµÇÁö ¾Ê´Â´Ù.
+ë˜í•œ ë¬¸ìžì—´ì€ ëŒ€ë¬¸ìžë¥¼ êµ¬ë¶„í•˜ê¸° ë•Œë¬¸ì— ì†Œë¬¸ìžì¸ scottìœ¼ë¡œ ê²€ìƒ‰í•˜ë©´ ë‹¤ë¥¸ ê²ƒìœ¼ë¡œ ì¸ì‹ë˜ì–´ ê²€ìƒ‰ ê²°ê³¼ê°€ ì¶œë ¥ë˜ì§€ ì•ŠëŠ”ë‹¤.
